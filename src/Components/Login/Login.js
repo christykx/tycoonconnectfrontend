@@ -8,6 +8,7 @@ import { AuthContext } from '../../authContext/AuthContext';
 // import Axios from 'axios'
 // import { AuthContext } from '../../authContext/AuthContext';
 import axios from 'axios';
+const token = localStorage.getItem('user')
 
 
 function Login() {
@@ -73,7 +74,11 @@ function Login() {
             // console.log("detailssssss",details._id);
 
             let id = response.userid
-            axios.get(`https://tycoonconnect.online/users/login/${id}`).then((res) => {
+            axios.get(`https://tycoonconnect.online/users/login/${id}`,{
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            }).then((res) => {
 
                 console.log("Login details", res.data);
 

@@ -24,7 +24,8 @@ export const AuthContextProvider = ({ children }) => {
 
         return new Promise(async (resolve, reject) => {
 
-            const res = await makeRequest.post('/users/login', details, { withCredentials: true })
+            const res = await makeRequest.post('/users/login', details, {
+                 withCredentials: true })
             console.log(res,'res-----------------------//')
                 if(res?.data?.status ==false){
                     console.log('helo-------------------------------')
