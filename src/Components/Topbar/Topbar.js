@@ -173,9 +173,12 @@ export default function Topbar({ socket }) {
     const [postpreview, setpostpreview] = useState('');
 
     const { currentUser } = useContext(AuthContext)
-    const userid = currentUser.userid;
-    console.log(userid, "CURRENT USERRR");
 
+    // const userid = currentUser.userid;
+    // console.log(userid, "CURRENT USERRR");
+
+    const id = currentUser.userid;
+    console.log(id, "CURRENT USERRR");
 
     const [search, setSearch] = useState('')
     const [usernames, setusernames] = useState([])
@@ -371,8 +374,8 @@ export default function Topbar({ socket }) {
 
     // const navigate = useNavigate()
     // const { currentUser } = useContext(AuthContext)
-    const id = currentUser.userid;
-    console.log(id, "CURRENT USERRR");
+
+ 
 
 
 
