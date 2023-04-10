@@ -17,7 +17,7 @@ function Profile() {
   console.log(id, "CURRENT USERRR");
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/users/getpost/${id}`).then((response) => {
+    axios.get(`https://tycoonconnect.online/users/getpost/${id}`).then((response) => {
 
       console.log(response, "RESSSSSSS");
       if (response.status) {
@@ -76,7 +76,7 @@ function Profile() {
           <h6 style={{ marginLeft: '15px' }}>{post.caption}</h6>
           <h6 style={{ fontWeight: 'normal', marginLeft: '15px' }}>{post.description}</h6>
           {/* <h1 style={{ minWidth: '10px' }}>{post.postpic}</h1> */}
-          <img style={{ width: '495px', height: '220px' }} src={`http://localhost:3001/uploads/${post.postPicture}`} />
+          <img style={{ width: '495px', height: '220px' }} src={`https://tycoonconnect.online/uploads/${post.postPicture}`} />
 
 
 

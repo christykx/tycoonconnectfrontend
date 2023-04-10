@@ -34,7 +34,7 @@ function Messages() {
     useEffect(() => {
 
 
-        makeRequest.get(`http://localhost:3001/users/conversationget/${id}`).then((response) => {
+        makeRequest.get(`https://tycoonconnect.online/users/conversationget/${id}`).then((response) => {
 
             if (response.status) {
                 console.log(response?.data, "Gettingg Conversation dataaaaaaa in MAIN chat pageee");
@@ -142,7 +142,7 @@ function Messages() {
 
     function currentconv(otheruserid) {
 
-        makeRequest.get(`http://localhost:3001/users/currentconv/${otheruserid}`).then((response) => {
+        makeRequest.get(`https://tycoonconnect.online/users/currentconv/${otheruserid}`).then((response) => {
 
             if (response.status) {
                 console.log(response?.data, "Gettingg current Conversation dataaaaaaa");

@@ -109,7 +109,7 @@ const Banner = () => {
           <h6 style={{marginLeft:'15px'}}>{post.caption}</h6>
           <h6 style={{ fontWeight: 'normal',marginLeft:'15px' }}>{post.description}</h6>
           {/* <h1 style={{ minWidth: '10px' }}>{post.postpic}</h1> */}
-          <img style={{width:'495px',height:'220px'}} src={`http://localhost:3001/uploads/${post.postPicture}`} />
+          <img style={{width:'495px',height:'220px'}} src={`https://tycoonconnect.online/uploads/${post.postPicture}`} />
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: '10px' }}>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">

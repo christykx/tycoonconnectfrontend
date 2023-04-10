@@ -1,6 +1,6 @@
 export const config =
 {
-  ServerURL: "http://localhost:3001"
+  ServerURL: "https://tycoonconnect.online/"
 
   // ServerURL: "https://tycoonconnectapi.onrender.com"
 

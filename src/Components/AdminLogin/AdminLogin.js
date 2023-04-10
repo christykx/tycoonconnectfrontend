@@ -36,7 +36,7 @@ function AdminLogin() {
         if (Object.keys(error).length === 0 && issubmit) {
             // console.log(user);
             // axios.post('https://tycoonconnectapi.onrender.com/admin/adminlogin', {
-            axios.post('http://localhost:3001/admin/adminlogin', {
+            axios.post('https://tycoonconnect.online/admin/adminlogin', {
 
                 // name: user.name,
                 // phone: user.phone,

@@ -73,7 +73,7 @@ function Login() {
             // console.log("detailssssss",details._id);
 
             let id = response.userid
-            axios.get(`http://localhost:3001/users/login/${id}`).then((res) => {
+            axios.get(`https://tycoonconnect.online/users/login/${id}`).then((res) => {
 
                 console.log("Login details", res.data);
 
