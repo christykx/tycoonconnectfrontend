@@ -32,7 +32,7 @@ export const AuthContextProvider = ({ children }) => {
                 reject('blocked')
                 return
             }
-            if (res.data?.status) {
+            if (res) {
                 setCurrentUser(res.data)
                 setCurrentUser1(res.data?.accessToken)
                 localStorage.setItem("user1", res.data?.accessToken)
