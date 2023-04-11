@@ -41,7 +41,7 @@ export const AuthContextProvider = ({ children }) => {
             //    alert()
             localStorage.setItem("user1",res.data?.accessToken)
             //    setCurrentUser1(res.data.accessToken)
-            localStorage.setItem("user",res.data)
+            localStorage.setItem("user",JSON.stringify(res.data))
             
          
 
