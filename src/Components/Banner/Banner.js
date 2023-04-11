@@ -1079,12 +1079,12 @@ function Banner({ socket }) {
 
         makeRequest.get('/users/getcomment').then((response) => {
 
-            console.log(response, "getting comment RESSSSSSS");
+            // console.log(response, "getting comment RESSSSSSS");
             if (response.status) {
-                console.log(response?.data, "getting comment Dataaaaa");
+                // console.log(response?.data, "getting comment Dataaaaa");
                 setgetcomment(response?.data)
 
-                console.log("Haiiii");
+                // console.log("Haiiii");
                 // alert("Post Details kitti")
                 // navigate('/profile')
             }
