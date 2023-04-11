@@ -169,7 +169,7 @@ input {
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
 	background: linear-gradient(to right, #FF4B2B, #FF416C); */
 
-    background-image: url('../../../public/overlaybg.jpeg');
+    background-image: url('https://res.cloudinary.com/tycoonconnect/image/upload/v1681200220/AdobeStock_62440810_Preview-transformed_zro9c6.jpg');
     
 	background-size: cover;
 	background-repeat: no-repeat;
