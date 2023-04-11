@@ -21,8 +21,6 @@ export const AuthContextProvider = ({ children }) => {
 
     const login = (details) => {
 
-    
-
         return new Promise(async (resolve, reject) => {
 
             const res = await makeRequest.post('/users/login', details, {
@@ -38,13 +36,11 @@ export const AuthContextProvider = ({ children }) => {
                
             //    alert()
             localStorage.setItem("user1",res.data?.accessToken)
-            localStorage.setItem("user",res.data?.userid)
+            // localStorage.setItem("user",res.data?.userid)
 
-            //    setCurrentUser1(res.data.accessToken)
+               setCurrentUser(res.data?.userid)
             // localStorage.setItem("user",res.data)
             
-         
-
         })
 
     };
@@ -54,7 +50,6 @@ export const AuthContextProvider = ({ children }) => {
         if (currentUser != undefined) {
             localStorage.setItem("user", JSON.stringify(currentUser))
             // localStorage.setItem("user1",res.data?.accessToken)
-           
         }
     }, [currentUser]);
 
