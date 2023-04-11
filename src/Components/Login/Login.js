@@ -64,7 +64,7 @@ function Login() {
         login(details).then((response) => {
 
             console.log("detailssssss", details);
-            // console.log(`Bearer ${token.accesstoken}`)
+            console.log(`Bearer ${token.accesstoken}`)
 
             console.log(response, "KItti poiiiiiiiiiiiiiiii");
             console.log(response.userid, "KItti poiiiiiiiiiiiiiiii");

@@ -32,9 +32,9 @@ export const AuthContextProvider = ({ children }) => {
                        reject('blocked')
                        return
                }
-               setCurrentUser(res.data.accessToken)
+               setCurrentUser(res.data)
                resolve(res.data)
-               alert(res.data)
+               alert(res.data.accessToken)
             
          
 
