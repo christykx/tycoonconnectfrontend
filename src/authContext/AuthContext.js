@@ -31,14 +31,14 @@ export const AuthContextProvider = ({ children }) => {
                        reject('blocked')
                        return
                }
-               setCurrentUser(res.data.userid)
+            //    setCurrentUser(res.data?.userid)
                resolve(res.data)
                
             //    alert()
             localStorage.setItem("user1",res.data?.accessToken)
-            // localStorage.setItem("user",res.data?.userid)
+            localStorage.setItem("user",res.data?.userid)
 
-               setCurrentUser(res.data?.userid)
+            //    setCurrentUser1(res.data?.accessToken)
             // localStorage.setItem("user",res.data)
             
         })
