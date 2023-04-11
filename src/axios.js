@@ -12,7 +12,7 @@ console.log(token," from axios instence")
 export const makeRequest = axios.create({
     baseURL: "https://tycoonconnect.online",
     headers: {
-        'Authorization': `Bearer ${currentUser?.accessToken}`,
+        'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
     },
     withCredentials: true
