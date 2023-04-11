@@ -138,6 +138,7 @@ export default function Topbar({ socket }) {
     const navigate = useNavigate()
     const logout = () => {
         localStorage.removeItem("user")
+        localStorage.removeItem("user1")
         window.location.reload(false);
         navigate('/login')
     }
