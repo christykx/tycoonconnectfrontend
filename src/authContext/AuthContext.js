@@ -6,7 +6,9 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
 
-    const [currentUser, setCurrentUser] = useState(localStorage.getItem("user") || null);
+    // const [currentUser, setCurrentUser] = useState(localStorage.getItem("user") || null);
+    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("user")) || null);
+
     const [currentUser1, setCurrentUser1] = useState(localStorage.getItem("user1") || null);
 
     const [blockdata, setblockdata] = useState('');
