@@ -5,7 +5,7 @@ const token = localStorage.getItem('user')
 export const makeRequest = axios.create({
     baseURL: "https://tycoonconnect.online",
     headers: {
-        'Authorization': `Bearer ${token?.accessToken}`
+        'Authorization': `Bearer ${token}`
     },
     withCredentials: true
 });
