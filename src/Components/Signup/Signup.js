@@ -62,10 +62,10 @@ function Signup() {
             cpassword: values.cpassword
 
         }, 
-        {headers: {
-            'Authorization':  `Bearer ${token?.accessToken}, ${token?.userid} `,
-            'Content-Type': 'application/json'
-        }},
+        // {headers: {
+        //     'Authorization':  `Bearer ${token?.accessToken}, ${token?.userid} `,
+        //     'Content-Type': 'application/json'
+        // }},
         {
             withCredentials: true,
         }).then((response) => {
