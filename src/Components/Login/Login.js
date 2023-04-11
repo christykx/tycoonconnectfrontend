@@ -77,7 +77,7 @@ function Login() {
             let id = response.userid
             axios.get(`https://tycoonconnect.online/users/login/${id}`,{
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    'Authorization': `Bearer ${token.accessToken}`
                 }
             }).then((res) => {
                 

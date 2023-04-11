@@ -63,7 +63,7 @@ function Signup() {
 
         }, 
         {headers: {
-            'Authorization': `Bearer ${token}`
+            'Authorization': `Bearer ${token.accessToken}`
         }},
         {
             withCredentials: true,
