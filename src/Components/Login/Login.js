@@ -129,8 +129,6 @@ function Login() {
                         <h2 style={{ marginTop: '-30px' }}>LOGIN</h2>
 
 
-
-
                         <input type="email" name="email" placeholder="E-mail" onChange={handleChange} />
                         {
                             errors.email && <p style={{ color: 'red', fontWeight: 'bolder' }}>{errors.email}</p>

@@ -36,7 +36,7 @@ export const AuthContextProvider = ({ children }) => {
                setCurrentUser(res.data)
                resolve(res.data)
             //    alert()
-            localStorage.setItem("user1",res.data.accessToken)
+            localStorage.setItem("user1",res.data?.accessToken)
             //    setCurrentUser1(res.data.accessToken)
             
          
