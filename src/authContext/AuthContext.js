@@ -3,12 +3,11 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { resolvePath } from "react-router-dom";
 import { makeRequest } from "../axios";
 export const AuthContext = createContext();
-const token= localStorage.getItem("user")
 export const AuthContextProvider = ({ children }) => {
 
-    const [currentUser, setCurrentUser] = useState(token || null);
+    const [currentUser, setCurrentUser] = useState(localStorage.getItem("user") || null);
     
-    // const [currentUser1, setCurrentUser1] = useState(localStorage.getItem("user1") || null);
+    const [currentUser1, setCurrentUser1] = useState(localStorage.getItem("user1") || null);
 
     const [blockdata, setblockdata] = useState('');
 
@@ -34,12 +33,12 @@ export const AuthContextProvider = ({ children }) => {
                        reject('blocked')
                        return
                }
-               setCurrentUser(res.data)
+               setCurrentUser(res.data.userid)
                resolve(res.data)
                
             //    alert()
             localStorage.setItem("user1",res.data?.accessToken)
-            localStorage.setItem("user",{...res.data?.accessToken,...res.data?.userid})
+            localStorage.setItem("user",res.data?.userid)
 
             //    setCurrentUser1(res.data.accessToken)
             // localStorage.setItem("user",res.data)
@@ -53,7 +52,7 @@ export const AuthContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (currentUser != undefined) {
-            localStorage.setItem("user",...currentUser)
+            localStorage.setItem("user", JSON.stringify(currentUser))
             // localStorage.setItem("user1",res.data?.accessToken)
            
         }
