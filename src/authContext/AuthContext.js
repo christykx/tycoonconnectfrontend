@@ -3,12 +3,12 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { resolvePath } from "react-router-dom";
 import { makeRequest } from "../axios";
 export const AuthContext = createContext();
-
+const token= localStorage.getItem("user")
 export const AuthContextProvider = ({ children }) => {
 
-    const [currentUser, setCurrentUser] = useState(localStorage.getItem("user") || null);
+    const [currentUser, setCurrentUser] = useState(token || null);
     
-    const [currentUser1, setCurrentUser1] = useState(localStorage.getItem("user1") || null);
+    // const [currentUser1, setCurrentUser1] = useState(localStorage.getItem("user1") || null);
 
     const [blockdata, setblockdata] = useState('');
 
