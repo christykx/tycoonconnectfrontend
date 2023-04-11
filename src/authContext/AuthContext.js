@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
 
-    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("user")) || null);
+    const [currentUser, setCurrentUser] = useState(localStorage.getItem("user") || null);
 
     const [blockdata, setblockdata] = useState('');
 
@@ -32,7 +32,7 @@ export const AuthContextProvider = ({ children }) => {
                        reject('blocked')
                        return
                }
-               setCurrentUser(res.data.accessToken)
+               setCurrentUser(res.data)
                resolve(res.data)
                alert(res.data.accessToken)
             
@@ -45,7 +45,7 @@ export const AuthContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (currentUser != undefined) {
-            localStorage.setItem("user", JSON.stringify(currentUser))
+            localStorage.setItem("user", currentUser)
         }
     }, [currentUser]);
 
