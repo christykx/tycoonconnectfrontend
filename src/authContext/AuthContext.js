@@ -31,12 +31,12 @@ export const AuthContextProvider = ({ children }) => {
                        reject('blocked')
                        return
                }
-               setCurrentUser(res.data?.userid)
+               setCurrentUser(res.data)
                resolve(res.data)
                
             //    alert()
             localStorage.setItem("user1",res.data?.accessToken)
-            localStorage.setItem("user",res.data?.userid)
+            // localStorage.setItem("user",res.data?.userid)
 
             //    setCurrentUser1(res.data?.accessToken)
             // localStorage.setItem("user",res.data)
@@ -46,12 +46,12 @@ export const AuthContextProvider = ({ children }) => {
     };
 
 
-    // useEffect(() => {
-    //     if (currentUser != undefined) {
-    //         localStorage.setItem("user", JSON.stringify(currentUser))
-    //         // localStorage.setItem("user1",res.data?.accessToken)
-    //     }
-    // }, [currentUser]);
+    useEffect(() => {
+        if (currentUser != undefined) {
+            localStorage.setItem("user", JSON.stringify(currentUser))
+            // localStorage.setItem("user1",res.data?.accessToken)
+        }
+    }, [currentUser,currentUser1]);
 
     return (
         <AuthContext.Provider value={{ currentUser, login }}>
