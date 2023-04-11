@@ -8,7 +8,7 @@ import { AuthContext } from '../../authContext/AuthContext';
 // import Axios from 'axios'
 // import { AuthContext } from '../../authContext/AuthContext';
 import axios from 'axios';
-const token = localStorage.getItem('user')
+const token = localStorage.getItem('user1')
 
 
 function Login() {

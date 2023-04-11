@@ -7,6 +7,7 @@ export const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
 
     const [currentUser, setCurrentUser] = useState(localStorage.getItem("user") || null);
+    const [currentUser1, setCurrentUser1] = useState(localStorage.getItem("user1") || null);
 
     const [blockdata, setblockdata] = useState('');
 
@@ -34,7 +35,8 @@ export const AuthContextProvider = ({ children }) => {
                }
                setCurrentUser(res.data)
                resolve(res.data)
-               alert(res.data.accessToken)
+            //    alert()
+               setCurrentUser1(res.data.accessToken)
             
          
 
@@ -46,8 +48,9 @@ export const AuthContextProvider = ({ children }) => {
     useEffect(() => {
         if (currentUser != undefined) {
             localStorage.setItem("user",JSON.stringify(currentUser))
+            localStorage.setItem("user1",currentUser1)
         }
-    }, [currentUser]);
+    }, [currentUser,currentUser1]);
 
     return (
         <AuthContext.Provider value={{ currentUser, login }}>
