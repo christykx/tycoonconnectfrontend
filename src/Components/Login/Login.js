@@ -64,6 +64,7 @@ function Login() {
         login(details).then((response) => {
 
             console.log("detailssssss", details);
+            console.log(`Bearer ${token}`)
 
             console.log(response, "KItti poiiiiiiiiiiiiiiii");
             console.log(response.userid, "KItti poiiiiiiiiiiiiiiii");
@@ -79,7 +80,7 @@ function Login() {
                     'Authorization': `Bearer ${token}`
                 }
             }).then((res) => {
-
+                
                 console.log("Login details", res.data);
 
                 navigate("/")
