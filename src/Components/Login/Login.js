@@ -64,6 +64,8 @@ function Login() {
         login(details).then((response) => {
 
             console.log("detailssssss", details);
+
+            console.log(token,"Tokeeennn");
             console.log( `Bearer ${token?.accessToken}, ${token?.userid} `)
 
             console.log(response, "KItti poiiiiiiiiiiiiiiii");
@@ -76,10 +78,10 @@ function Login() {
 
             let id = response.userid
             axios.get(`https://tycoonconnect.online/users/login/${id}`,{
-                headers: {
-                    'Authorization':  `Bearer ${token?.accessToken}, ${token?.userid} `,
-                    'Content-Type': 'application/json'
-                }
+                // headers: {
+                //     'Authorization':  `Bearer ${token?.accessToken}, ${token?.userid} `,
+                //     'Content-Type': 'application/json'
+                // }
             }).then((res) => {
                 
                 console.log("Login details", res.data);
