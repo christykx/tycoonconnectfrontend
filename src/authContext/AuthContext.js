@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
 
     const [currentUser, setCurrentUser] = useState(localStorage.getItem("user") || null);
-    
+
     const [currentUser1, setCurrentUser1] = useState(localStorage.getItem("user1") || null);
 
     const [blockdata, setblockdata] = useState('');
@@ -24,26 +24,31 @@ export const AuthContextProvider = ({ children }) => {
         return new Promise(async (resolve, reject) => {
 
             const res = await makeRequest.post('/users/login', details, {
-                 withCredentials: true })
-            console.log(res,'res-----------------------//')
-                if(res?.data?.status ==false){
-                    console.log('helo-------------------------------')
-                       reject('blocked')
-                       return
-               }
-               setCurrentUser(res.data)
-               setCurrentUser1(res.data?.accessToken)
+                withCredentials: true
+            })
+            console.log(res, 'res-----------------------//')
+            if (res?.data?.status == false) {
+                console.log('helo-------------------------------')
+                reject('blocked')
+                return
+            }
+            if (res.data?.status) {
+                setCurrentUser(res.data)
+                setCurrentUser1(res.data?.accessToken)
+                localStorage.setItem("user1", res.data?.accessToken)
 
-               resolve(res.data)
-               
-            
+                resolve(res.data)
+
+            }
+
+
             // localStorage.setItem("user1",res.data?.accessToken)
 
             // localStorage.setItem("user",res.data?.userid)
 
             //    setCurrentUser1(res.data?.accessToken)
             // localStorage.setItem("user",res.data)
-            
+
         })
 
     };
@@ -56,7 +61,7 @@ export const AuthContextProvider = ({ children }) => {
 
             // localStorage.setItem("user1",res.data?.accessToken)
         }
-    }, [currentUser,currentUser1]);
+    }, [currentUser, currentUser1]);
 
     return (
         <AuthContext.Provider value={{ currentUser, login }}>
