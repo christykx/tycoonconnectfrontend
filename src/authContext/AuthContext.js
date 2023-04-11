@@ -34,6 +34,7 @@ export const AuthContextProvider = ({ children }) => {
                }
                setCurrentUser(res.data)
                resolve(res.data)
+               alert(res.data)
             
          
 
