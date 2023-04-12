@@ -7,7 +7,7 @@ import { io } from "socket.io-client"
 
 import ChatOnline from '../ChatOnline/ChatOnline';
 import { AuthContext } from '../../authContext/AuthContext';
-import { makeRequest } from '../../axios';
+import  makeRequest  from '../../axios';
 import { green } from '@mui/material/colors';
 import axios from 'axios';
 import { fontFamily, Stack, width } from '@mui/system';

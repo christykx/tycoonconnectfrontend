@@ -31,7 +31,7 @@ import MuiAlert from '@mui/material/Alert';
 import ViewUser from '../ViewUser/ViewUser';
 import { PostContext } from '../../store/PostContext';
 import { PostInfoContext } from '../../store/PostInfoContext';
-import { makeRequest } from '../../axios';
+import  makeRequest  from '../../axios';
 import { config } from '../../url';
 
 import UploadWidget from '../UploadWidget';

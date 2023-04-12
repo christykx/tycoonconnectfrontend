@@ -8,7 +8,7 @@ import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../authContext/AuthContext';
-import { makeRequest } from '../../axios';
+import makeRequest  from '../../axios';
 
 
 

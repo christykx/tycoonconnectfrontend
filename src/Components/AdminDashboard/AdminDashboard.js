@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { makeRequest } from '../../axios';
+// import { makeRequest } from '../../axios';
+import makeRequest from '../../axios';
 
 function AdminDashboard() {
 

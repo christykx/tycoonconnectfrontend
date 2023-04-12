@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { makeRequest } from '../../axios';
+import makeRequest  from '../../axios';
 import './ChatOnline.css'
 
 function ChatOnline({ onlineusers, currentid }) {

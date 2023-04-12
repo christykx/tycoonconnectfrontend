@@ -3,7 +3,7 @@ import Peer from 'peerjs';
 import { Stack } from '@mui/system';
 import { io } from 'socket.io-client'
 import { AuthContext } from '../../authContext/AuthContext';
-import { makeRequest } from '../../axios';
+import  makeRequest  from '../../axios';
 
 
 function VideoCalls(props) {

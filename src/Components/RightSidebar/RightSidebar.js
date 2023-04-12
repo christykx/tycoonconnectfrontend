@@ -3,7 +3,7 @@ import { Box } from '@mui/system'
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../authContext/AuthContext'
-import { makeRequest } from '../../axios'
+import makeRequest     from '../../axios'
 // import { PostContext } from '../../store/PostContext'
 import { PostContext } from '../../store/PostContext'
 

@@ -48,7 +48,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Badge from '@mui/material/Badge';
 import { PostInfoContext } from '../../store/PostInfoContext';
-import { makeRequest } from '../../axios';
+import makeRequest from '../../axios';
 import { config } from '../../url';
 
 import { format } from "timeago.js"

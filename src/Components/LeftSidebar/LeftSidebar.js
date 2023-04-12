@@ -19,7 +19,7 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
 import Badge from '@mui/material/Badge';
-import { makeRequest } from '../../axios';
+import makeRequest  from '../../axios';
 import { config } from '../../url';
 import UploadWidget from '../UploadWidget';
 

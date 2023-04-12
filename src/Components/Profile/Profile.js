@@ -25,7 +25,7 @@ import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import { PhotoCamera } from '@mui/icons-material';
-import { makeRequest } from '../../axios';
+import  makeRequest  from '../../axios';
 // import { config } from '../../url';
 
 import EditIcon from '@mui/icons-material/Edit';

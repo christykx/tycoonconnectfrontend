@@ -1,7 +1,8 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
 import { resolvePath } from "react-router-dom";
-import { makeRequest } from "../axios";
+// import { makeRequest } from "../axios";
+import makeRequest from "../axios";
 export const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
 
@@ -33,7 +34,7 @@ export const AuthContextProvider = ({ children }) => {
                 reject('blocked')
                 return
             }
-            
+
             if (res?.data?.accessToken) {
                 setCurrentUser(res.data);
                 localStorage.setItem("user1", res.data.accessToken);

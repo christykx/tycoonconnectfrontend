@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../authContext/AuthContext';
-import { makeRequest } from '../../axios';
+import makeRequest  from '../../axios';
 import { config } from '../../url';
 import Chats from '../Chats/Chats';
 import './Conversations.css'

@@ -6,7 +6,7 @@ import './Messages.css'
 
 import ChatOnline from '../ChatOnline/ChatOnline';
 import { AuthContext } from '../../authContext/AuthContext';
-import { makeRequest } from '../../axios';
+import makeRequest  from '../../axios';
 import { green } from '@mui/material/colors';
 import axios from 'axios';
 
