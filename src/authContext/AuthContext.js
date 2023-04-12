@@ -33,22 +33,25 @@ export const AuthContextProvider = ({ children }) => {
                 reject('blocked')
                 return
             }
-            if (res) {
+            
+            if (res?.data?.accessToken) {
+                setCurrentUser(res.data);
+                localStorage.setItem("user1", res.data.accessToken);
+                resolve(res.data);
+              } else {
+                reject('unable to get token');
+              }
+
+
+            // if (res) {
                 // setCurrentUser(res.data)
                 // // setCurrentUser1(res.data?.accessToken)
                 // localStorage.setItem("user1", res.data?.accessToken)
                 // const t= localStorage.getItem("user1")
                 // console.log("USER ACCESS TOKEN",t);
-
                 // resolve(res.data)
+            // }
 
-                console.log(res.data.accessToken, 'accessToken');
-                setCurrentUser(res.data)
-                localStorage.setItem("user1", res.data?.accessToken)
-                console.log(localStorage.getItem("user1"), 'localStorage');
-                resolve(res.data)
-
-            }
 
 
             // localStorage.setItem("user1",res.data?.accessToken)
