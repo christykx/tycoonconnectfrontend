@@ -34,10 +34,18 @@ export const AuthContextProvider = ({ children }) => {
                 return
             }
             if (res) {
-                setCurrentUser(res.data)
-                // setCurrentUser1(res.data?.accessToken)
-                localStorage.setItem("user1", res.data?.accessToken)
+                // setCurrentUser(res.data)
+                // // setCurrentUser1(res.data?.accessToken)
+                // localStorage.setItem("user1", res.data?.accessToken)
+                // const t= localStorage.getItem("user1")
+                // console.log("USER ACCESS TOKEN",t);
 
+                // resolve(res.data)
+
+                console.log(res.data.accessToken, 'accessToken');
+                setCurrentUser(res.data)
+                localStorage.setItem("user1", res.data?.accessToken)
+                console.log(localStorage.getItem("user1"), 'localStorage');
                 resolve(res.data)
 
             }
