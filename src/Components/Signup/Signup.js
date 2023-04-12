@@ -8,7 +8,7 @@ import Axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-const token = localStorage.getItem('user')
+const token = localStorage.getItem('user1')
 
 function Signup() {
 
@@ -62,10 +62,10 @@ function Signup() {
             cpassword: values.cpassword
 
         }, 
-        // {headers: {
-        //     'Authorization':  `Bearer ${token?.accessToken}, ${token?.userid} `,
-        //     'Content-Type': 'application/json'
-        // }},
+        {headers: {
+            'Authorization':  `Bearer ${token} `,
+            'Content-Type': 'application/json'
+        }},
         {
             withCredentials: true,
         }).then((response) => {

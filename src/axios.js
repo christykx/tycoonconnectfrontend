@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 // const token = localStorage.getItem('user')
-    const token = localStorage.getItem("user1")
+    const token = localStorage.getItem('user1')
     console.log(token, " from axios instence")
 
 
