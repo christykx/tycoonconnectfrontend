@@ -26,6 +26,7 @@ export const AuthContextProvider = ({ children }) => {
             const res = await makeRequest.post('/users/login', details, {
                 withCredentials: true
             })
+
             console.log(res, 'res-----------------------//')
             if (res?.data?.status == false) {
                 console.log('helo-------------------------------')
@@ -34,7 +35,7 @@ export const AuthContextProvider = ({ children }) => {
             }
             if (res) {
                 setCurrentUser(res.data)
-                setCurrentUser1(res.data?.accessToken)
+                // setCurrentUser1(res.data?.accessToken)
                 localStorage.setItem("user1", res.data?.accessToken)
 
                 resolve(res.data)
@@ -57,11 +58,11 @@ export const AuthContextProvider = ({ children }) => {
     useEffect(() => {
         if (currentUser != undefined) {
             localStorage.setItem("user", JSON.stringify(currentUser))
-            localStorage.setItem("user1", JSON.stringify(currentUser1))
+            // localStorage.setItem("user1", JSON.stringify(currentUser1))
 
             // localStorage.setItem("user1",res.data?.accessToken)
         }
-    }, [currentUser, currentUser1]);
+    }, [currentUser]);
 
     return (
         <AuthContext.Provider value={{ currentUser, login }}>
