@@ -46,7 +46,7 @@ function Messages() {
 
     useEffect(() => {
         // socket.current = io("ws://localhost:8900");
-        socket.current= io("https://tycoonconnectsocket.onrender.com");
+        socket.current= io("https://tycoonconnectsocket.onrender.com:8900");
 
 
         // socket.current = io("https://example.com:8900");
