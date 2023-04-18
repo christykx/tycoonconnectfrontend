@@ -371,7 +371,7 @@ function LeftSidebar({ mode, setMode }) {
                         </ListItemButton>
                     </ListItem>
 
-
+{/* 
                     <ListItem disablePadding onClick={() => { navigate('/saved') }}>
                         <ListItemButton>
                             <ListItemIcon>
@@ -379,7 +379,7 @@ function LeftSidebar({ mode, setMode }) {
                             </ListItemIcon>
                             <ListItemText primary="Saved" />
                         </ListItemButton>
-                    </ListItem>
+                    </ListItem> */}
 
 
                     <ListItem onClick={logout} disablePadding>

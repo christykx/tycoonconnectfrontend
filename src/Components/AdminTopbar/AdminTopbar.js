@@ -118,12 +118,12 @@ export default function Topbar({ socket }) {
 
 
 
-            <MenuItem>
+            {/* <MenuItem>
                 <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                     <BookmarkIcon />
                 </IconButton>
                 <p>Saved</p>
-            </MenuItem>
+            </MenuItem> */}
 
 
             <MenuItem>

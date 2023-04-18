@@ -435,13 +435,13 @@ export default function Topbar({ socket }) {
                 </IconButton>
                 <p>create</p>
             </MenuItem>
-
+{/* 
             <MenuItem>
                 <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                     <BookmarkIcon />
                 </IconButton>
                 <p>Saved</p>
-            </MenuItem>
+            </MenuItem> */}
 
 
             <MenuItem>
@@ -745,9 +745,9 @@ export default function Topbar({ socket }) {
                         <AddCircleIcon />
                     </IconButton>
 
-                    <IconButton onClick={() => { navigate('/saved') }} size="large" color="inherit">
+                    {/* <IconButton onClick={() => { navigate('/saved') }} size="large" color="inherit">
                         <BookmarkIcon />
-                    </IconButton>
+                    </IconButton> */}
 
 
                     <IconButton onClick={() => { navigate('/chat') }} size="large" color="inherit">
